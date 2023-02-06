@@ -23,17 +23,7 @@ public class Individual extends Payer {
 
 	@Override
 	public Double tax() {
-		Double basicTax = 0.0;
-		if (income < 20000) {
-			basicTax = income*0.15 - health/2;
-		}
-		else {
-			basicTax = income*0.25 - health/2;
-		}
-		
-		if (basicTax < 0.0) {
-			basicTax = 0.0;
-		}
+		Double basicTax = (income < 20000) ? income * 0.15 - health/2: income * 0.25 - health/2;
 		return basicTax;
 	}
 
