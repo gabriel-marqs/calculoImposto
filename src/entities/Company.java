@@ -23,13 +23,14 @@ public class Company extends Payer {
 
 	@Override
 	public Double tax() {
+		double basicTax = 0;
 		if (employees > 10) {
-			income = income*0.14;
+			basicTax = income*0.14;
 		}
 		else {
-			income = income*0.16;
+			basicTax = income*0.16;
 		}
-		return income;
+		return basicTax;
 	}
 
 }

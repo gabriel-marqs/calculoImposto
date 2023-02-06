@@ -47,9 +47,10 @@ public class Program {
 		
 		double totalTaxes = 0.0;
 		
+		System.out.print("\nTAXES PAID:\n");
 		for (Payer p : payers) {
 			p.tax();
-			totalTaxes += p.getIncome();
+			totalTaxes += p.tax();
 			System.out.println(p);
 		}
 		

@@ -34,8 +34,7 @@ public abstract class Payer {
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
 		sb.append(name + ": $ ");
-		sb.append(String.format("%.2f", income));
-		
+		sb.append(String.format("%.2f", tax()));
 		return sb.toString();
 	}
 }
